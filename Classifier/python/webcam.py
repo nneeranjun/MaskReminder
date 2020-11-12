@@ -1,29 +1,29 @@
-import os
-import zipfile
-import random
-import shutil
-import tensorflow as tf
-from tensorflow.keras.optimizers import RMSprop
-from tensorflow.keras.preprocessing.image import ImageDataGenerator
-from shutil import copyfile
-from os import getcwd
-from os import listdir
+# import os
+# import zipfile
+# import random
+# import shutil
+# import tensorflow as tf
+# from tensorflow.keras.optimizers import RMSprop
+# from tensorflow.keras.preprocessing.image import ImageDataGenerator
+# from shutil import copyfile
+# from os import getcwd
+# from os import listdir
 import cv2
 from tensorflow import keras
-from tensorflow.keras.layers import Conv2D, Input, ZeroPadding2D, BatchNormalization, Activation, MaxPooling2D, Flatten, Dense
-from tensorflow.keras.models import Model, load_model
-from tensorflow.keras.callbacks import TensorBoard, ModelCheckpoint
-from sklearn.model_selection import train_test_split
-from sklearn.metrics import f1_score
-from sklearn.utils import shuffle
-import imutils
+# from tensorflow.keras.layers import Conv2D, Input, ZeroPadding2D, BatchNormalization, Activation, MaxPooling2D, Flatten, Dense
+# from tensorflow.keras.models import Model, load_model
+# from tensorflow.keras.callbacks import TensorBoard, ModelCheckpoint
+# from sklearn.model_selection import train_test_split
+# from sklearn.metrics import f1_score
+# from sklearn.utils import shuffle
+#import imutils
 import numpy as np
-import matplotlib.pyplot as plt
-import matplotlib.image  as mpimg
+# import matplotlib.pyplot as plt
+# import matplotlib.image  as mpimg
 
 
-model = keras.models.load_model()
-face_clsfr=cv2.CascadeClassifier("../inputfiles/haarcascade_frontalface_default.xml")
+model = keras.models.load_model("../outputfiles/classifier.keras")
+#face_clsfr=cv2.CascadeClassifier("../inputfiles/haarcascade_frontalface_default.xml")
 
 labels_dict = {0: 'without_mask', 1: 'with_mask'}
 color_dict = {0: (0, 0, 255), 1: (0, 255, 0)}
@@ -32,7 +32,7 @@ size = 4
 webcam = cv2.VideoCapture(0)  # Use camera 0
 
 # We load the xml file
-classifier = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
+classifier = cv2.CascadeClassifier("../inputfiles/haarcascade_frontalface_default.xml")
 
 while True:
     (rval, im) = webcam.read()
@@ -54,7 +54,7 @@ while True:
         reshaped = np.reshape(normalized, (1, 150, 150, 3))
         reshaped = np.vstack([reshaped])
         result = model.predict(reshaped)
-        # print(result)
+        print(result)
 
         label = np.argmax(result, axis=1)[0]
 
