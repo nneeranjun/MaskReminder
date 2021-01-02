@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "780835717347",
+    "firebase_url": "https://mask-reminder-2e2cb.firebaseio.com",
+    "project_id": "mask-reminder-2e2cb",
+    "storage_bucket": "mask-reminder-2e2cb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:780835717347:android:69688bc58513e1b30e05d6",
+        "android_client_info": {
+          "package_name": "com.example.maskreminderapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "780835717347-4h04spafhv8qbmrcv27it81mrm00cuf2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDZ6cmZVYonWlYghViLUIxGdh5XcdUrCi4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "780835717347-4h04spafhv8qbmrcv27it81mrm00cuf2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

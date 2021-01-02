@@ -1,0 +1,21 @@
+{
+  "images" : [
+    {
+      "filename" : "b034bbead413429c1b8baec32768f07a85-man-in-mask.rsquare.w1200.jpg",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

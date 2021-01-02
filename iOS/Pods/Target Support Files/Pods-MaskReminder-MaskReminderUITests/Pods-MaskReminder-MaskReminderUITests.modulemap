@@ -1,0 +1,6 @@
+framework module Pods_MaskReminder_MaskReminderUITests {
+  umbrella header "Pods-MaskReminder-MaskReminderUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
